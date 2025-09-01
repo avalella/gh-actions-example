@@ -7,6 +7,16 @@ on:
   pull_request:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      name:
+        description: 'Bla bla'
+        required: true
+        type: string
+      specialGreeting:
+        description: 'Who?'
+        required: false
+        type: string
 
 jobs:
   build:
@@ -15,6 +25,10 @@ jobs:
       issues: write
       pull-requests: write
     steps:
+      - name: test
+        run: |
+          echo "Hey ${{ inputs.name }}"
+          echo "Greating ${{ inputs.specialGreeting }}"
       - name: checkout
         uses: actions/checkout@v4
       - name: setup-java
