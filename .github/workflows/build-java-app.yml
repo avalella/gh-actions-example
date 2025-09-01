@@ -1,4 +1,4 @@
-name: Greetings
+name: build-java-app
 
 on:
   push:
