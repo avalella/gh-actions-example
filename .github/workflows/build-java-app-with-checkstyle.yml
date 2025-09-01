@@ -5,12 +5,7 @@
 name: Build a Java Application with checkstyle
 
 on:
-  push:
-    branches: [ "main" ]
-    paths:
-      - java-app/**
-  pull_request:
-    branches: [ "main" ]
+  workflow_dispatch:
 
 jobs:
   build:
