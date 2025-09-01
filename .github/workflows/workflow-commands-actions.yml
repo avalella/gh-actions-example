@@ -8,6 +8,6 @@ jobs:
 
     steps:
       - name: Test composite
-        uses: ./.github/actions/action.yml@main
+        uses: ./.github/actions/compose-action/action.yml@main
         with:
           skip-tests: true
