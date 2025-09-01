@@ -17,4 +17,4 @@ jobs:
           distribution: 'temurin'
           java-version: '21'
       - name: maven
-        run: mvn clean install
+        run: cd java-app && mvn clean install
