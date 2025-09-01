@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # ENV Vars
+      - name: checkout
+        uses: actions/checkout@v4
       - name: Test composite
         uses: ./.github/actions/action.yml@main
         with:
