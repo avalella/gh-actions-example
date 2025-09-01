@@ -1,0 +1,14 @@
+name: Action Commands
+on:
+  workflow_dispatch:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ENV Vars
+      - name: Test composite
+        uses: ./.github/actions
+        with:
+          skip-tests: true
